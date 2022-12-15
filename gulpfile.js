@@ -6,10 +6,8 @@ const cleanCSS = require("gulp-clean-css");
 const sass = require("gulp-sass")(require("sass"));
 const sourcemaps = require("gulp-sourcemaps");
 const fileinclude = require("gulp-file-include");
-
 const browserSync = require("browser-sync");
 const reload = browserSync.reload;
-
 const babel = require("gulp-babel");
 const clean = require("gulp-clean");
 
@@ -24,7 +22,6 @@ function includeHTML() {
     )
     .pipe(dest("./dist"));
 }
-
 exports.html = includeHTML;
 
 //sass
@@ -37,7 +34,6 @@ function sassstyle() {
     .pipe(sourcemaps.write())
     .pipe(dest("dist/css"));
 }
-
 exports.style = sassstyle;
 
 //js
@@ -51,7 +47,6 @@ function Jsminify() {
     )
     .pipe(dest("dist/js"));
 }
-
 exports.uglify = Jsminify;
 
 // 降轉 babel es6 - > es5
@@ -65,7 +60,6 @@ function babel5() {
     .pipe(uglify())
     .pipe(dest("dist/js"));
 }
-
 exports.js_update = babel5;
 
 //搬家
@@ -79,7 +73,6 @@ function clear() {
     clean({ force: true })
   );
 }
-
 exports.cls = clear;
 
 // 瀏覽器同步

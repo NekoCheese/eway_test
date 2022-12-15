@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>鎰威科技前端面試作業</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
+    />
+    <script src="https://unpkg.com/vue@2"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 1.標題 -->
+      <div class="top_banner center">
+        <div class="main_title center">
+          <h2>There is no one</h2>
+          <h3>who loves pain</h3>
+        </div>
+
+        <button class="btn" desable>FORM</button>
+
+        <div class="info center">
+
+          <ol>
+            @@include('./layout/cactus.html')
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          </ol>
+
+          <ol>
+            @@include('./layout/cactus.html')
+            <li>Quisque sodales leo <span class="bold overline">vitae vulputate auctor.</span></li>
+            <li>Proin ac justo ut nisl tincidunt imperdiet.Maecenas viverra libero a pellentesque blandit.</li>
+            <li>Cras tristique tellus id leo bibendum, eu dapibus nisl accumsan.</li>
+            <li>Donec ultrices sapien <span class="bold">vitae leo venenatis ullamcorper.</span></li>
+          </ol>
+          
+        </div>
+      </div>
+
+      <!-- 2.海浪 -->
+      <div class="wave_mov"></div>
+
+      <!-- 3.表單 -->
+      <div class="lottery_form"></div>
+
+      <!-- 4.獎項 -->
+      <div class="lottery_info"></div>
+
+      <!-- 5.燈塔 -->
+      <div class="tower"></div>
+
+      <!-- 6.商城 -->
+      <div class="market"></div>
+    </div>
+
+    <script type="module" src="js/index.min.js"></script>
+  </body>
 </html>

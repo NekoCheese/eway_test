@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+// 1.標題
+.top_banner {
+  height: 634px;
+  background-image: url('../images/waves.png');
+  background-size: 4784px 586px;
+  background-position: center;
+  background-color: $blue_dark;
+
+  .main_title {
+    color: $white;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    padding-top: 60px;
+
+    h2,
+    h3 {
+      line-height: 125%;
+    }
+  }
+
+  .info {
+    width: 808px;
+    align-items: stretch;
+    background-color: $blue_light;
+    color: $blue_dark;
+    border: 2px solid $brown;
+    border-radius: 20px;
+    padding-top: 24px;
+    z-index: 10;
+
+    ol {
+      list-style: block;
+      margin: 0 32px;
+      margin-bottom: 24px;
+    }
+
+    ol>li{
+      line-height: 180%;
+    }
+
+  }
+
+  button {
+    margin: 32px 0;
+  }
+}
+
+// 2.海浪
+.wave_mov {
+}
+
+// 3.表單
+.lottery_form {
+}
+
+// 4.獎項
+.lottery_info {
+}
+
+// 5.燈塔
+.tower {
+}
+
+// 6.商城
+.market {
+}

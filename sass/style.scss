@@ -1,41 +1,55 @@
 // reset
 @import "base/reset";
-
-// 字型
-
 // mixin
 @import "mixin/mixin";
-
 // base
 @import "base/font";
 @import "base/color";
-
 // component
 @import "component/btn";
-
 // layout
-
+@import "layout/cactus";
 // page
 @import "page/index";
 
 body {
+  font-family: "Noto Sans TC", sans-serif;
+  background-color: $pink;
 }
 
 h1 {
   font-size: 40px;
 }
-
 h2 {
   font-size: 32px;
 }
-
 h3 {
   font-size: 24px;
 }
-
 h4 {
   font-size: 20px;
 }
 h5 {
   font-size: 18px;
 }
+
+// 垂直置中
+.center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+// 粗體
+.bold{
+  font-weight: bold;
+}
+
+// 底線
+.overline{
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+
+
