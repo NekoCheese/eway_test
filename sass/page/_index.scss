@@ -9,6 +9,11 @@
   border-radius: 50%;
 }
 
+.red {
+  color: $brown;
+  margin-left: 4px;
+}
+
 // 1.標題
 .top_banner {
   height: 634px;
@@ -56,11 +61,73 @@
 }
 
 // 2.海浪
-.wave_mov {
+.wave {
+  display: flex;
+  overflow: hidden;
+  img {
+    display: block;
+    width: 100%;
+  }
 }
 
 // 3.表單
 .lottery_form {
+  margin-top: 81px;
+  margin-bottom: 58px;
+
+  .title{
+    position: absolute;
+    background-color: $white;
+    width: 123px;
+    height: 43px;
+    color: $brown;
+    border: 2px solid $brown;
+    border-radius: 50px;
+    transform: translateY(-50%);
+    text-align: center;
+  }
+
+  .turtle{
+    position: absolute;
+    right: 0;
+  }
+
+  .lottery_submit{
+    margin-top: 40px;
+  }
+
+  #lottery {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 808px;
+    padding: 40px 20px;
+    background: $white;
+    border: 2px solid $brown;
+    border-radius: 16px;
+
+    p {
+      color: $blue_dark;
+      padding-bottom: 4px;
+    }
+
+    div {
+    }
+  }
+}
+
+input,
+select {
+  width: 100%;
+  height: 57px;
+  border: 1px solid $blue_dark;
+  border-radius: 20px;
+  margin-bottom: 20px;
+
+  &::placeholder {
+    color: $placeholder;
+    padding-left: 16px;
+  }
 }
 
 // 4.獎項
@@ -112,6 +179,10 @@
 }
 
 .info_bottom_animation {
+  /* 煙火 */
+  .fireworks {
+  }
+
   .bottom_boat {
     position: absolute;
     left: 38px;
