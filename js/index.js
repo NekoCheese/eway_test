@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 new Vue({
   el: "#app",

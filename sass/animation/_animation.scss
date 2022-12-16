@@ -1,0 +1,46 @@
+@keyframes bubble {
+  0% {
+    bottom: 10%;
+    opacity: 0.3;
+  }
+  20% {
+    transform: translateX(50px);
+    opacity: 0.5;
+    bottom: 20%;
+  }
+  40% {
+    transform: translateX(-50px);
+    opacity: 1;
+    bottom: 40%;
+  }
+  60% {
+    transform: translateX(100px);
+    opacity: 0.5;
+    bottom: 60%;
+  }
+  80% {
+    transform: translateX(-100px);
+    bottom: 80%;
+    opacity: 0.3;
+  }
+}
+
+.bubble {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -1;
+
+  $range: 40;
+  @for $i from 1 through $range {
+    &:nth-child(#{$i}) {
+      @if $i <= ($range * 0.5) {
+        left: #{5 * $i + "%"};
+      } @else {
+        left: #{(-5 * $i) + ($range * 5) + "%"};
+      }
+      animation: bubble linear #{random(30) + 10 + s} infinite;
+      animation-delay: #{$i * random(10) * 0.1 + s};
+    }
+  }
+}

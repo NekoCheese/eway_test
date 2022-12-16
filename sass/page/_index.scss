@@ -1,11 +1,18 @@
 * {
   box-sizing: border-box;
+  // outline: 1px solid red;
+}
+
+// 泡泡
+.bubble {
+  border: 1px solid $white;
+  border-radius: 50%;
 }
 
 // 1.標題
 .top_banner {
   height: 634px;
-  background-image: url('../images/waves.png');
+  background-image: url("../images/waves.png");
   background-size: 4784px 586px;
   background-position: center;
   background-color: $blue_dark;
@@ -24,13 +31,13 @@
 
   .info {
     width: 808px;
+    position: relative;
     align-items: stretch;
     background-color: $blue_light;
     color: $blue_dark;
     border: 2px solid $brown;
     border-radius: 20px;
     padding-top: 24px;
-    z-index: 10;
 
     ol {
       list-style: block;
@@ -38,10 +45,9 @@
       margin-bottom: 24px;
     }
 
-    ol>li{
+    ol > li {
       line-height: 180%;
     }
-
   }
 
   button {
@@ -67,4 +73,48 @@
 
 // 6.商城
 .market {
+}
+
+// 動畫相關
+.info_top_animation {
+  position: absolute;
+  right: 0;
+  transform: translate(-16px, -54px);
+
+  .bubble_box {
+    position: absolute;
+    height: 50vh;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+
+  .bubble_s {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+  }
+
+  .bubble_m {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+  }
+
+  .top_boat {
+  }
+
+  .top_paddle {
+    position: absolute;
+    width: 62px;
+    height: 45.75px;
+  }
+}
+
+.info_bottom_animation {
+  .bottom_boat {
+    position: absolute;
+    left: 38px;
+    bottom: -49px;
+  }
 }
