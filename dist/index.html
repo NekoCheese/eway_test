@@ -28,9 +28,11 @@
               <div class="bubble_s bubble"></div>
               <div class="bubble_m bubble"></div>
             </div>
+
             <img class="top_paddle" src="./images/paddle.png" />
             <img class="top_boat" src="./images/boat.svg" />
           </div>
+
           <ol>
             <div class="info_cactus">
   <img src="../images/cactus.png" alt="cactus" />
@@ -70,6 +72,7 @@
             <div class="fireworks">
               <img src="./images/fireworks.svg" />
             </div>
+
             <img class="bottom_boat" src="./images/sup_bot.svg" />
           </div>
         </div>
@@ -87,11 +90,19 @@
           FORM
           <img class="turtle" src="./images/turtle.png" />
         </h5>
+
         <div id="lottery">
           <div>
             <p>store<span class="red">*</span></p>
-            <select id="lottery_story" placeholder="placeholder text"></select>
+            <select id="lottery_story">
+              <option disabled selected>placeholder text</option>
+              <option>Lorem, ipsum.</option>
+              <option>Lorem, ipsum dolor.</option>
+            </select>
+            <div class="select_arrow"></div>
+            <span class="wrong_msg"></span>
           </div>
+
           <div>
             <p>name<span class="red">*</span></p>
             <input
@@ -99,7 +110,9 @@
               id="lottery_name"
               placeholder="placeholder text"
             />
+            <span class="wrong_msg"></span>
           </div>
+
           <div>
             <p>phone<span class="red">*</span></p>
             <input
@@ -107,7 +120,9 @@
               id="lottery_phone"
               placeholder="placeholder text"
             />
+            <span class="wrong_msg"></span>
           </div>
+
           <div>
             <p>Amount of consumption<span class="red">*</span></p>
             <input
@@ -115,15 +130,21 @@
               id="lottery_amount"
               placeholder="placeholder text"
             />
+            <span class="wrong_msg"></span>
           </div>
+
           <div>
             <p>payment<span class="red">*</span></p>
-            <select
-              id="lottery_payment"
-              placeholder="placeholder text"
-            ></select>
+            <select id="lottery_payment">
+              <option>digital payment</option>
+              <option>Lorem, ipsum.</option>
+              <option>Lorem, ipsum dolor.</option>
+            </select>
+            <div class="select_arrow"></div>
+            <span class="wrong_msg"></span>
           </div>
         </div>
+
         <button class="lottery_submit btn">submit</button>
       </div>
 

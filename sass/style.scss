@@ -8,9 +8,6 @@
 // component
 @import "component/btn";
 @import "component/reward";
-@import "component/other";
-
-
 // layout
 @import "layout/cactus";
 // page
@@ -47,15 +44,12 @@ h5 {
 }
 
 // 粗體
-.bold{
+.bold {
   font-weight: bold;
 }
 
 // 底線
-.overline{
+.overline {
   text-decoration: underline;
   text-underline-position: under;
 }
-
-
-
