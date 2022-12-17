@@ -1,3 +1,4 @@
+// 泡泡動畫
 @keyframes bubble {
   0% {
     bottom: 10%;
@@ -22,6 +23,29 @@
     transform: translateX(-100px);
     bottom: 80%;
     opacity: 0.3;
+  }
+}
+
+// 按鈕動畫
+@keyframes rainbow {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+// 海浪動畫
+@keyframes wave {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
 

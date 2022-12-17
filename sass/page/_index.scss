@@ -19,13 +19,17 @@
 
   .main_title {
     color: $white;
-    font-weight: 700;
-    letter-spacing: 0.2em;
     padding-top: 60px;
 
     h2,
-    h3 {
+    span {
+      letter-spacing: 0.2em;
       line-height: 125%;
+      font-weight: 700;
+    }
+
+    span {
+      font-size: 28px;
     }
   }
 
@@ -59,15 +63,19 @@
 .wave {
   display: flex;
   overflow: hidden;
+  margin-top: -2px;
+
   img {
-    display: block;
     width: 100%;
+    animation: wave 15s linear infinite;
+    border: none;
+    margin-left: -2px;
   }
 }
 
 // 3.表單
 .lottery_form {
-  margin-top: 81px;
+  margin-top: 80px;
   margin-bottom: 58px;
 
   .title {
@@ -189,6 +197,7 @@
   border-radius: 50px 50px 0 0;
   padding: 40px 19px;
   width: 100%;
+  height: auto;
 
   .market_title {
     width: 303px;
