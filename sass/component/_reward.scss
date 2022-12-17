@@ -45,6 +45,10 @@
 
 .r_green {
   color: $green;
+
+  .r_name{
+    transform: translateY(-13px);
+  }
 }
 .r_gray {
   color: $blue;
