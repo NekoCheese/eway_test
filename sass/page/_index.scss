@@ -52,11 +52,48 @@
     ol > li {
       line-height: 180%;
     }
+
+    .info_top {
+      position: absolute;
+      right: 0;
+      transform: translate(-16px, -54px);
+    }
   }
 
   button {
     margin: 32px 0;
   }
+}
+
+// 泡泡
+.bubble_box {
+  position: absolute;
+  height: 50vh;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+// 船
+.top_boat {
+}
+
+// 槳
+.top_paddle {
+  position: absolute;
+  left: 30%;
+  top: 30%;
+  width: 62px;
+  height: 45.75px;
+
+  animation: paddle 3s infinite;
+}
+
+// 煙火
+.fireworks {
+  z-index: 10;
+  position: absolute;
+  animation: fireworks 2s infinite;
 }
 
 // 2.海浪
@@ -275,28 +312,6 @@
 }
 
 // 動畫相關
-.info_top_animation {
-  position: absolute;
-  right: 0;
-  transform: translate(-16px, -54px);
-
-  .bubble_box {
-    position: absolute;
-    height: 50vh;
-    right: 0;
-    left: 0;
-    bottom: 0;
-  }
-
-  .top_boat {
-  }
-
-  .top_paddle {
-    position: absolute;
-    width: 62px;
-    height: 45.75px;
-  }
-}
 
 .info_bottom_animation {
   /* 煙火 */
