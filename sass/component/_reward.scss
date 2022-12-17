@@ -1,0 +1,64 @@
+.r_card {
+  position: relative;
+  background-color: $white;
+  width: 178px;
+  height: 112px;
+  box-shadow: 0 8px 0 #edeef0;
+  border-radius: 20px;
+  margin-bottom: 40px;
+
+  .r_level_A,
+  .r_level_D {
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    color: $white;
+    line-height: 65px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transform: translateY(-45%);
+  }
+
+  .r_num {
+    background-color: #FAFAFA;
+    position: absolute;
+    width: 45px;
+    height: 23px;
+
+    border: 1px solid;
+    border-radius: 50px;
+
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+
+    right: 8px;
+    top: 18px;
+  }
+
+  .r_name {
+    width: 100%;
+    height: 44px;
+    text-align: center;
+  }
+}
+
+.r_green {
+  color: $green;
+}
+.r_gray {
+  color: $blue;
+}
+
+.r_level_A {
+  background-image: url("../images/certificateA.svg");
+  width: 65px;
+  height: 78px;
+}
+
+.r_level_D {
+  background-image: url("../images/certificateD.svg");
+  width: 65px;
+  height: 65px;
+}
