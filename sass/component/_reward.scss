@@ -6,8 +6,7 @@
   box-shadow: 0 8px 0 #edeef0;
   border-radius: 20px;
 
-  .r_level_A,
-  .r_level_D {
+  .r_level {
     background-repeat: no-repeat;
     background-position: center;
     text-align: center;
@@ -54,13 +53,13 @@
   color: $blue;
 }
 
-.r_level_A {
+.A {
   background-image: url("../images/certificateA.svg");
   width: 65px;
   height: 78px;
 }
 
-.r_level_D {
+.D {
   background-image: url("../images/certificateD.svg");
   width: 65px;
   height: 65px;

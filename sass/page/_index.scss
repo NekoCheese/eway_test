@@ -13,7 +13,7 @@
   position: absolute;
   color: red;
   left: 0;
-  bottom: -5px;
+  bottom: 3px;
 }
 
 // 泡泡
@@ -52,9 +52,6 @@ select {
 // 隱藏 datalist 箭頭
 input::-webkit-calendar-picker-indicator {
   display: none !important;
-}
-
-datalist {
 }
 
 // #########################

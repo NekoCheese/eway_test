@@ -72,6 +72,7 @@
       <div class="wave">
         <img src="./images/wave.png" />
         <img src="./images/wave.png" />
+        <img src="./images/wave.png" />
       </div>
 
       <!-- 3.表單 -->
@@ -153,15 +154,10 @@
       <!-- 4.獎項 -->
       <div class="lottery_info">
         <ul class="lottery_box">
-          <li class="r_card r_green">
-            <div class="r_level_A">A</div>
-            <div class="r_num">ONE</div>
-            <div class="r_name">dehumidifier</div>
-          </li>
-          <li class="r_card r_gray">
-            <div class="r_level_D">B</div>
-            <div class="r_num">ONE</div>
-            <div class="r_name">range hood</div>
+          <li class="r_card" v-for="card in cardArray" :class="card.color">
+            <div class="r_level" :class="card.level">{{card.level}}</div>
+            <div class="r_num">{{card.num}}</div>
+            <div class="r_name">{{card.name}}</div>
           </li>
         </ul>
       </div>

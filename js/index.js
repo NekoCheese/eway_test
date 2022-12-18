@@ -21,6 +21,17 @@ new Vue({
     f_payment: "digital payment",
     f_payment_error: true,
     f_payment_ErrMsg: "",
+
+    cardArray: [
+      { color: "r_green", level: "A", num: "ONE", name: "dehummidifier" },
+      { color: "r_green", level: "A", num: "ONE", name: "range hood" },
+      { color: "r_green", level: "A", num: "ONE", name: "vacuum cleaner" },
+      { color: "r_gray", level: "D", num: "ONE", name: "toaster" },
+      { color: "r_gray", level: "D", num: "ONE", name: "scale" },
+      { color: "r_gray", level: "D", num: "ONE", name: "straightening iron" },
+      { color: "r_gray", level: "D", num: "FIVE", name: "vacuum cleaner" },
+      { color: "r_gray", level: "D", num: "TEN", name: "rice cooker" },
+    ],
   },
 
   watch: {
@@ -29,7 +40,7 @@ new Vue({
       const nameExp = /^[\u4e00-\u9fa5a-zA-Z]+$/;
       if (!nameExp.test(this.f_name)) {
         this.f_name_error = true;
-        this.f_name_ErrMsg = "請輸入中文或英文";
+        this.f_name_ErrMsg = "Please enter Chinese or English";
       } else {
         this.f_name_error = false;
         this.f_name_ErrMsg = "";
@@ -41,7 +52,7 @@ new Vue({
       const phoneExp = /^09\d{8}$/;
       if (!phoneExp.test(this.f_phone)) {
         this.f_phone_error = true;
-        this.f_phone_ErrMsg = "請輸入正確的電話號碼";
+        this.f_phone_ErrMsg = "Please enter the correct phone number";
       } else {
         this.f_phone_error = false;
         this.f_phone_ErrMsg = "";
@@ -53,7 +64,7 @@ new Vue({
       const amountExp = /^[0-9]+$/;
       if (!amountExp.test(this.f_amount)) {
         this.f_amount_error = true;
-        this.f_amount_ErrMsg = "輸入金額錯誤";
+        this.f_amount_ErrMsg = "Wrong amount entered";
       } else {
         this.f_amount_error = false;
         this.f_amount_ErrMsg = "";
@@ -62,9 +73,10 @@ new Vue({
 
     f_store: function () {
       if (this.f_store == "") {
-        this.f_store_ErrMsg = "請選擇位於清單內的商店";
+        this.f_store_ErrMsg = "Please select a store from the list";
       } else {
         this.f_store_error = false;
+        this.f_store_ErrMsg = "";
       }
     },
 
@@ -97,7 +109,7 @@ new Vue({
     resetIfInvalid: function () {
       if (this.f_store == "") return;
       let options = document.querySelector("#store").children;
-      for (var i = 0; i < options.length; i++) {
+      for (let i = 0; i < options.length; i++) {
         console.log(options[i].value);
         if (this.f_store == options[i].value) return;
       }
