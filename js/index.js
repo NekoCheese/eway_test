@@ -99,9 +99,9 @@ new Vue({
         this.f_amount_error != true &&
         this.f_payment_error != true
       ) {
-        alert("資料成功送出");
+        alert("Data successfully sent");
       } else {
-        alert("送出失敗，請確認資料填寫無誤");
+        alert("Failed to send, please confirm that the information is filled in correctly");
       }
     },
 

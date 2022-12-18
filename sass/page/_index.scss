@@ -63,6 +63,10 @@ input::-webkit-calendar-picker-indicator {
   background-position: center;
   background-color: $blue_dark;
 
+  @include mobile {
+    height: 789px;
+  }
+
   .main_title {
     color: $white;
     padding-top: 60px;
@@ -81,6 +85,7 @@ input::-webkit-calendar-picker-indicator {
 
   .info {
     max-width: 808px;
+    width: calc(100% - 48px);
     position: relative;
     align-items: stretch;
     background-color: $blue_light;
@@ -167,8 +172,7 @@ input::-webkit-calendar-picker-indicator {
 
 // 3.表單
 .lottery_form {
-  margin-top: 80px;
-  margin-bottom: 58px;
+  margin: 80px 24px 58px;
 
   .title {
     position: absolute;
@@ -251,6 +255,11 @@ input::-webkit-calendar-picker-indicator {
     column-gap: 20px;
     row-gap: 50px;
     justify-items: center;
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+    }
   }
 }
 
