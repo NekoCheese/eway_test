@@ -63,6 +63,10 @@ select {
 }
 
 // 隱藏 datalist 箭頭
+select {
+  -webkit-appearance: none;
+}
+
 input::-webkit-calendar-picker-indicator {
   display: none !important;
 }
