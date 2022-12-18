@@ -127,7 +127,8 @@
           <div>
             <p>phone<span class="red">*</span></p>
             <input
-              type="number"
+              type="text"
+              inputmode="numeric"
               placeholder="placeholder text"
               maxlength="10"
               v-model="f_phone"
@@ -138,8 +139,8 @@
           <div>
             <p>Amount of consumption<span class="red">*</span></p>
             <input
-              type="number"
-              id="lottery_amount"
+              type="text"
+              inputmode="numeric"
               placeholder="placeholder text"
               v-model="f_amount"
             />
@@ -148,7 +149,7 @@
 
           <div>
             <p>payment<span class="red">*</span></p>
-            <select id="lottery_payment" v-model="f_payment">
+            <select v-model="f_payment">
               <option disabled selected>digital payment</option>
               <option>ATM</option>
             </select>
@@ -157,7 +158,15 @@
           </div>
         </div>
 
-        <button class="lottery_submit btn" @click="signUp()">submit</button>
+        <button
+          class="lottery_submit btn"
+          :class="submit_btn"
+          @click="signUp()"
+        >
+          {{submit_btn}}
+        </button>
+
+        <span class="wrong_msg submit_errMsg">{{f_submit_ErrMsg}}</span>
       </div>
 
       <!-- 4.獎項 -->

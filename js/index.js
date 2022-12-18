@@ -22,6 +22,10 @@ new Vue({
     f_payment_error: true,
     f_payment_ErrMsg: "",
 
+    f_submit_ErrMsg: "",
+
+    submit_btn: "submit",
+
     cardArray: [
       { color: "r_green", level: "A", num: "ONE", name: "dehummidifier" },
       { color: "r_green", level: "A", num: "ONE", name: "range hood" },
@@ -99,11 +103,10 @@ new Vue({
         this.f_amount_error != true &&
         this.f_payment_error != true
       ) {
-        alert("Data successfully sent");
+        this.submit_btn = "success";
       } else {
-        alert(
-          "Failed to send, please confirm that the information is filled in correctly"
-        );
+        this.submit_btn = "failure";
+        this.f_submit_ErrMsg = "This person dose not exist";
       }
     },
 
@@ -112,7 +115,7 @@ new Vue({
       if (this.f_store == "") return;
       let options = document.querySelector("#store").children;
       for (let i = 0; i < options.length; i++) {
-        console.log(options[i].value);
+        // console.log(options[i].value);
         if (this.f_store == options[i].value) return;
       }
       this.f_store = "";

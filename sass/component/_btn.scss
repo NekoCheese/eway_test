@@ -3,6 +3,7 @@
   width: 200px;
   height: 57px;
   color: $white;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.2em;
   border: none;
@@ -52,5 +53,29 @@
     z-index: -2;
     transition: all 0.3s ease-in-out;
     animation: rainbow 20s linear infinite;
+  }
+}
+
+.success {
+  padding-left: 48px;
+  color: #E6FFB1;
+  &::before {
+    background-image: url("../images/success.png");
+  }
+}
+
+.failure {
+  padding-left: 32px;
+  color: #FFE3E3;
+  &::before {
+    background-image: url("../images/failure.png");
+  }
+}
+
+.failure,
+.success {
+  &::before {
+    background-repeat: no-repeat;
+    background-position: 20% 50%;
   }
 }

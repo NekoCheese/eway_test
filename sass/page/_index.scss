@@ -18,6 +18,12 @@
   bottom: 3px;
 }
 
+.submit_errMsg{
+  position: relative;
+  height: 0;
+  bottom: -8px;
+}
+
 // 泡泡
 .bubble {
   position: absolute;
@@ -69,6 +75,7 @@ input::-webkit-calendar-picker-indicator {
   background-size: 4784px 586px;
   background-position: center;
   background-color: $blue_dark;
+  overflow: hidden;
 
   @include mobile {
     height: 789px;
