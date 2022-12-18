@@ -11,7 +11,9 @@
 // 錯誤訊息
 .wrong_msg {
   position: absolute;
-  color: red;
+  color: #E06D6D;
+  font-size: 12px;
+  font-weight: 400;
   left: 0;
   bottom: 3px;
 }
@@ -43,6 +45,11 @@ select {
   margin-bottom: 20px;
   padding-left: 16px;
   appearance: none;
+  outline: 0;
+
+  &:focus{
+    border: 3px solid #93BBF9;
+  }
 
   &::placeholder {
     color: $placeholder;

@@ -94,11 +94,11 @@
               v-model="f_store"
             />
             <datalist id="store">
-              <option value="Arkansas"></option>
-              <option value="Connecticut"></option>
-              <option value="Kentucky"></option>
-              <option value="Massachusetts"></option>
-              <option value="Pennsylvania"></option>
+              <option value="store1"></option>
+              <option value="store2"></option>
+              <option value="store3"></option>
+              <option value="store4"></option>
+              <option value="store5"></option>
             </datalist>
             <div class="select_arrow"></div>
             <span class="wrong_msg">{{f_store_ErrMsg}}</span>
@@ -117,7 +117,7 @@
           <div>
             <p>phone<span class="red">*</span></p>
             <input
-              type="text"
+              type="number"
               placeholder="placeholder text"
               maxlength="10"
               v-model="f_phone"
@@ -128,7 +128,7 @@
           <div>
             <p>Amount of consumption<span class="red">*</span></p>
             <input
-              type="text"
+              type="number"
               id="lottery_amount"
               placeholder="placeholder text"
               v-model="f_amount"
@@ -140,8 +140,7 @@
             <p>payment<span class="red">*</span></p>
             <select id="lottery_payment" v-model="f_payment">
               <option disabled selected>digital payment</option>
-              <option>VISA</option>
-              <option>PAYPAL</option>
+              <option>ATM</option>
             </select>
             <div class="select_arrow"></div>
             <span class="wrong_msg">{{f_payment_ErrMsg}}</span>
