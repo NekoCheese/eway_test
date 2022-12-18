@@ -43,11 +43,14 @@ new Vue({
       // 中英混合
       const nameExp = /^[\u4e00-\u9fa5a-zA-Z]+$/;
       if (!nameExp.test(this.f_name)) {
+        console.log(f_name);
         this.f_name_error = true;
         this.f_name_ErrMsg = "required";
+        f_name.classList.add("error_input");
       } else {
         this.f_name_error = false;
         this.f_name_ErrMsg = "";
+        f_name.classList.remove("error_input");
       }
     },
 
@@ -57,9 +60,11 @@ new Vue({
       if (!phoneExp.test(this.f_phone)) {
         this.f_phone_error = true;
         this.f_phone_ErrMsg = "required";
+        f_phone.classList.add("error_input");
       } else {
         this.f_phone_error = false;
         this.f_phone_ErrMsg = "";
+        f_phone.classList.remove("error_input");
       }
     },
 
@@ -69,9 +74,11 @@ new Vue({
       if (!amountExp.test(this.f_amount)) {
         this.f_amount_error = true;
         this.f_amount_ErrMsg = "required";
+        f_amount.classList.add("error_input");
       } else {
         this.f_amount_error = false;
         this.f_amount_ErrMsg = "";
+        f_amount.classList.remove("error_input");
       }
     },
 
@@ -84,13 +91,13 @@ new Vue({
       }
     },
 
-    f_payment: function () {
-      if (this.f_payment == "digital payment") {
-        this.f_payment_ErrMsg = "required";
-      } else {
-        this.f_payment_error = false;
-      }
-    },
+    // f_payment: function () {
+    //   if (this.f_payment == "digital payment") {
+    //     this.f_payment_ErrMsg = "required";
+    //   } else {
+    //     this.f_payment_error = false;
+    //   }
+    // },
   },
 
   methods: {
@@ -100,8 +107,7 @@ new Vue({
         this.f_store_error != true &&
         this.f_name_error != true &&
         this.f_phone_error != true &&
-        this.f_amount_error != true &&
-        this.f_payment_error != true
+        this.f_amount_error != true
       ) {
         this.submit_btn = "success";
       } else {

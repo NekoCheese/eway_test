@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>前端面試作業</title>
     <link rel="stylesheet" href="css/style.min.css" />
     <link
@@ -87,6 +87,7 @@
           <div>
             <p>store<span class="red">*</span></p>
             <input
+              id="f_store"
               type="text"
               placeholder="placeholder text"
               @Change="resetIfInvalid()"
@@ -108,6 +109,7 @@
           <div>
             <p>name<span class="red">*</span></p>
             <input
+              id="f_name"
               type="text"
               placeholder="placeholder text"
               v-model="f_name"
@@ -118,6 +120,7 @@
           <div>
             <p>phone<span class="red">*</span></p>
             <input
+              id="f_phone"
               type="text"
               inputmode="numeric"
               placeholder="placeholder text"
@@ -130,6 +133,7 @@
           <div>
             <p>Amount of consumption<span class="red">*</span></p>
             <input
+              id="f_amount"
               type="text"
               inputmode="numeric"
               placeholder="placeholder text"
@@ -141,7 +145,7 @@
           <div>
             <p>payment<span class="red">*</span></p>
             <select v-model="f_payment">
-              <option disabled selected>digital payment</option>
+              <option>digital payment</option>
               <option>ATM</option>
             </select>
             <div class="select_arrow"></div>

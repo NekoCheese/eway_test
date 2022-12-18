@@ -62,9 +62,9 @@ select {
   }
 }
 
-// 隱藏 datalist 箭頭
-select {
-  -webkit-appearance: none;
+.error_input:focus{
+  border: 3px solid #E06D6D;
+
 }
 
 input::-webkit-calendar-picker-indicator {
