@@ -11,14 +11,14 @@
 // 錯誤訊息
 .wrong_msg {
   position: absolute;
-  color: #E06D6D;
+  color: #e06d6d;
   font-size: 12px;
   font-weight: 400;
   left: 0;
   bottom: 3px;
 }
 
-.submit_errMsg{
+.submit_errMsg {
   position: relative;
   height: 0;
   bottom: -8px;
@@ -53,8 +53,8 @@ select {
   appearance: none;
   outline: 0;
 
-  &:focus{
-    border: 3px solid #93BBF9;
+  &:focus {
+    border: 3px solid #93bbf9;
   }
 
   &::placeholder {
@@ -160,6 +160,11 @@ input::-webkit-calendar-picker-indicator {
   left: 38px;
   bottom: -49px;
   z-index: 10;
+
+  @include mobile() {
+    bottom: -35px;
+    left: 5px;
+  }
 }
 
 // 煙火
@@ -168,6 +173,11 @@ input::-webkit-calendar-picker-indicator {
   position: absolute;
 
   animation: fireworks 2s infinite;
+
+  @include mobile() {
+    bottom: -30px;
+    left: -25px;
+  }
 }
 
 // 2.海浪

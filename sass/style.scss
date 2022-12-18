@@ -10,14 +10,22 @@
 @import "component/reward";
 // layout
 @import "layout/cactus";
-// page
-@import "page/index";
 // animation
 @import "animation/animation";
+// page
+@import "page/index";
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Noto Sans TC", sans-serif;
   background-color: $pink_light;
+}
+
+#app {
+  width: auto;
 }
 
 h1 {
