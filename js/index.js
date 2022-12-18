@@ -1,17 +1,107 @@
-"use strict";
-
 new Vue({
   el: "#app",
 
-  data: {},
+  data: {
+    f_store: "",
+    f_store_error: true,
+    f_store_ErrMsg: "",
 
-  mounted() {},
+    f_name: "",
+    f_name_error: true,
+    f_name_ErrMsg: "",
 
-  methods: {},
+    f_phone: "",
+    f_phone_error: true,
+    f_phone_ErrMsg: "",
 
-  beforeCreate() {},
+    f_amount: "",
+    f_amount_error: true,
+    f_amount_ErrMsg: "",
 
-  updated() {},
+    f_payment: "digital payment",
+    f_payment_error: true,
+    f_payment_ErrMsg: "",
+  },
 
-  beforeUpdate() {},
+  watch: {
+    f_name: function () {
+      // 中英混合
+      const nameExp = /^[\u4e00-\u9fa5a-zA-Z]+$/;
+      if (!nameExp.test(this.f_name)) {
+        this.f_name_error = true;
+        this.f_name_ErrMsg = "請輸入中文或英文";
+      } else {
+        this.f_name_error = false;
+        this.f_name_ErrMsg = "";
+      }
+    },
+
+    f_phone: function () {
+      // 台灣手機格式
+      const phoneExp = /^09\d{8}$/;
+      if (!phoneExp.test(this.f_phone)) {
+        this.f_phone_error = true;
+        this.f_phone_ErrMsg = "請輸入正確的電話號碼";
+      } else {
+        this.f_phone_error = false;
+        this.f_phone_ErrMsg = "";
+      }
+    },
+
+    f_amount: function () {
+      // 金額驗證
+      const amountExp = /^[0-9]+$/;
+      if (!amountExp.test(this.f_amount)) {
+        this.f_amount_error = true;
+        this.f_amount_ErrMsg = "輸入金額錯誤";
+      } else {
+        this.f_amount_error = false;
+        this.f_amount_ErrMsg = "";
+      }
+    },
+
+    f_store: function () {
+      if (this.f_store == "") {
+        this.f_store_ErrMsg = "請選擇位於清單內的商店";
+      } else {
+        this.f_store_error = false;
+      }
+    },
+
+    f_payment: function () {
+      if (this.f_payment == "digital payment") {
+        this.f_payment_ErrMsg = "請選擇付款方式";
+      } else {
+        this.f_payment_error = false;
+      }
+    },
+  },
+
+  methods: {
+    // 送出前驗證
+    signUp: function () {
+      if (
+        this.f_store_error != true &&
+        this.f_name_error != true &&
+        this.f_phone_error != true &&
+        this.f_amount_error != true &&
+        this.f_payment_error != true
+      ) {
+        alert("資料成功送出");
+      } else {
+        alert("送出失敗，請確認資料填寫無誤");
+      }
+    },
+
+    // 過濾商店選擇
+    resetIfInvalid: function () {
+      if (this.f_store == "") return;
+      let options = document.querySelector("#store").children;
+      for (var i = 0; i < options.length; i++) {
+        console.log(options[i].value);
+        if (this.f_store == options[i].value) return;
+      }
+      this.f_store = "";
+    },
+  },
 });

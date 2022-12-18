@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>鎰威科技前端面試作業</title>
+    <title>前端面試作業</title>
     <link rel="stylesheet" href="css/style.min.css" />
     <link
       rel="stylesheet"
@@ -94,33 +94,44 @@
         <div id="lottery">
           <div>
             <p>store<span class="red">*</span></p>
-            <select id="lottery_story">
-              <option disabled selected>placeholder text</option>
-              <option>Lorem, ipsum.</option>
-              <option>Lorem, ipsum dolor.</option>
-            </select>
+            <input
+              type="text"
+              placeholder="placeholder text"
+              @Change="resetIfInvalid()"
+              required
+              list="store"
+              v-model="f_store"
+            />
+            <datalist id="store">
+              <option value="aaaaaaa"></option>
+              <option value="bbbbbbb"></option>
+              <option value="ccccccc"></option>
+              <option value="ddddddd"></option>
+              <option value="eeeeeee"></option>
+            </datalist>
             <div class="select_arrow"></div>
-            <span class="wrong_msg"></span>
+            <span class="wrong_msg">{{f_store_ErrMsg}}</span>
           </div>
 
           <div>
             <p>name<span class="red">*</span></p>
             <input
               type="text"
-              id="lottery_name"
               placeholder="placeholder text"
+              v-model="f_name"
             />
-            <span class="wrong_msg"></span>
+            <span class="wrong_msg">{{f_name_ErrMsg}}</span>
           </div>
 
           <div>
             <p>phone<span class="red">*</span></p>
             <input
               type="text"
-              id="lottery_phone"
               placeholder="placeholder text"
+              maxlength="10"
+              v-model="f_phone"
             />
-            <span class="wrong_msg"></span>
+            <span class="wrong_msg">{{f_phone_ErrMsg}}</span>
           </div>
 
           <div>
@@ -129,23 +140,24 @@
               type="text"
               id="lottery_amount"
               placeholder="placeholder text"
+              v-model="f_amount"
             />
-            <span class="wrong_msg"></span>
+            <span class="wrong_msg">{{f_amount_ErrMsg}}</span>
           </div>
 
           <div>
             <p>payment<span class="red">*</span></p>
-            <select id="lottery_payment">
-              <option>digital payment</option>
+            <select id="lottery_payment" v-model="f_payment">
+              <option disabled selected>digital payment</option>
               <option>Lorem, ipsum.</option>
               <option>Lorem, ipsum dolor.</option>
             </select>
             <div class="select_arrow"></div>
-            <span class="wrong_msg"></span>
+            <span class="wrong_msg">{{f_payment_ErrMsg}}</span>
           </div>
         </div>
 
-        <button class="lottery_submit btn">submit</button>
+        <button class="lottery_submit btn" @click="signUp()">submit</button>
       </div>
 
       <!-- 4.獎項 -->
